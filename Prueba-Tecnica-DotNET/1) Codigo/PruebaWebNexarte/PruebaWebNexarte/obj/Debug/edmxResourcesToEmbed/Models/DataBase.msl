@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PruebaNexarteModelStoreContainer" CdmEntityContainer="PruebaNexarteEntities">
+    <EntitySetMapping Name="LOG_CONSULTA_NOM_NOMINA_DEFINITIVA">
+      <EntityTypeMapping TypeName="PruebaNexarteModel.LOG_CONSULTA_NOM_NOMINA_DEFINITIVA">
+        <MappingFragment StoreEntitySet="LOG_CONSULTA_NOM_NOMINA_DEFINITIVA">
+          <ScalarProperty Name="ID_REGISTRO" ColumnName="ID_REGISTRO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="OPERACION" ColumnName="OPERACION" />
+          <ScalarProperty Name="DESCRIPCION_EVENTO" ColumnName="DESCRIPCION_EVENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOM_CONCEPTOS_NOMINA">
+      <EntityTypeMapping TypeName="PruebaNexarteModel.NOM_CONCEPTOS_NOMINA">
+        <MappingFragment StoreEntitySet="NOM_CONCEPTOS_NOMINA">
+          <ScalarProperty Name="ID_CONCEPTO" ColumnName="ID_CONCEPTO" />
+          <ScalarProperty Name="DESC_CONCEPTO" ColumnName="DESC_CONCEPTO" />
+          <ScalarProperty Name="COD_CONCEPTO" ColumnName="COD_CONCEPTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOM_EMPLEADOS">
+      <EntityTypeMapping TypeName="PruebaNexarteModel.NOM_EMPLEADOS">
+        <MappingFragment StoreEntitySet="NOM_EMPLEADOS">
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="ID_SOLICITUD" ColumnName="ID_SOLICITUD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOM_NOMINA_DEFINITIVA">
+      <EntityTypeMapping TypeName="PruebaNexarteModel.NOM_NOMINA_DEFINITIVA">
+        <MappingFragment StoreEntitySet="NOM_NOMINA_DEFINITIVA">
+          <ScalarProperty Name="REGISTRO" ColumnName="REGISTRO" />
+          <ScalarProperty Name="FCH_CRE" ColumnName="FCH_CRE" />
+          <ScalarProperty Name="ID_CONCEPTO" ColumnName="ID_CONCEPTO" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="VAL_NOMINA" ColumnName="VAL_NOMINA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REG_SOLICITUDES_INGRESOS">
+      <EntityTypeMapping TypeName="PruebaNexarteModel.REG_SOLICITUDES_INGRESOS">
+        <MappingFragment StoreEntitySet="REG_SOLICITUDES_INGRESOS">
+          <ScalarProperty Name="ID_SOLICITUD" ColumnName="ID_SOLICITUD" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_CONSULTA_NOMINA_POR_DOCUMENTO" FunctionName="PruebaNexarteModel.Store.USP_CONSULTA_NOMINA_POR_DOCUMENTO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebaNexarteModel.USP_CONSULTA_NOMINA_POR_DOCUMENTO_Result">
+          <ScalarProperty Name="REGISTRO" ColumnName="REGISTRO" />
+          <ScalarProperty Name="COD_CONCEPTO" ColumnName="COD_CONCEPTO" />
+          <ScalarProperty Name="DESC_CONCEPTO" ColumnName="DESC_CONCEPTO" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="VAL_NOMINA" ColumnName="VAL_NOMINA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
